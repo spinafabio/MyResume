@@ -1,0 +1,12 @@
+<mat-drawer-container class="container" autosize>
+  <mat-drawer [opened]="true" class="sidenav" mode="side">
+    <p>Menu</p>
+    <mat-list role="list" *ngFor="let m of menu">
+      <app-menu [menu]="m"></app-menu>
+    </mat-list>
+  </mat-drawer>
+
+  <div class="sidenav-content">
+    <router-outlet></router-outlet>
+  </div>
+</mat-drawer-container>
